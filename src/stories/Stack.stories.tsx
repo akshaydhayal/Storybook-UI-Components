@@ -23,7 +23,16 @@ export const rowStack:Story={
         justify:"center",
         align:"center",
         tailwindStyles:"",
-        children:<><div>1</div><div>2</div><div>3</div></>
+        children:["Item 1","Item 2","Item 3"]
+    }
+} 
+export const colStack:Story={
+    args:{
+        direction:"column",
+        justify:"center",
+        align:"center",
+        tailwindStyles:"",
+        children:['a','b','c']
     }
 } 
 export default meta;

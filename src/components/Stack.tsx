@@ -4,7 +4,7 @@ import { ClassValue } from "clsx"
 import { ComponentProps } from "react"
 import { twMerge } from "tailwind-merge"
 
-const stackStyles=cva("p-4 w-screen flex gap-4 border-2 bg-blue-300 h-screen",{
+const stackStyles=cva("p-4 flex gap-4 border-2 border-black bg-blue-300 ",{
     variants:{
         direction:{
             row:"flex-row",
@@ -38,7 +38,9 @@ function cn(...classes:ClassValue[]){
 type stackType=VariantProps<typeof stackStyles> & ComponentProps<"div"> & {tailwindStyles:string};
 const Stack = ({direction,justify,align,children,tailwindStyles,...props}:stackType) => {
   return (
-    <div className={cn(stackStyles({direction,justify,align}),tailwindStyles)} {...props}>{children}</div>
+    <div className={cn(stackStyles({direction,justify,align}),tailwindStyles)} {...props}>
+        {children && Array.isArray(children) && children.map((i)=><div className="bg-yellow-300 text-black border py-2 px-4 border-slate-700 text-xl font-semibold">{i}</div>)}
+    </div>
   )
 }
 

@@ -1,5 +1,7 @@
 import type { Meta,StoryObj } from "@storybook/react";
-import Stack from "../components/Stack";
+import { lazy } from "react";
+// import Stack from "../components/Stack";
+const Stack=lazy(()=>import("../components/Stack"));
 
 const meta:Meta<typeof Stack>={
     title: "Components/Stack",

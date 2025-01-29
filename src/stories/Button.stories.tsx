@@ -1,9 +1,12 @@
 import type { Meta,StoryObj } from "@storybook/react"
-import Button1 from "../components/Button";
+// import Button1 from "../components/Button";
+import { lazy } from "react";
 
-const meta:Meta<typeof Button1>={
-    title:"Button1",
-    component:Button1,
+const Button=lazy(()=>import("../components/Button"));
+// 
+const meta:Meta<typeof Button>={
+    title:"Button",
+    component:Button,
     tags:["autodocs"],
     parameters:{
         layout:"centered"

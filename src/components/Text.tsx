@@ -40,8 +40,8 @@ function cn(...classes:ClassValue[]){
 
 }
 
-type textTypes=VariantProps<typeof textStyles> & ComponentProps<"span"> & {styles:string,text:string};
+type textTypes=VariantProps<typeof textStyles> & ComponentProps<"span"> & {tailwindStyles:string,text:string};
 
-export default function Text({variant,size,weight,italic,underline,styles,text,...props}:textTypes){
-  return <span className={cn(textStyles({variant,size,weight,'italic':italic,'underline':underline}),styles)} {...props}>{text}</span>
+export default function Text({variant,size,weight,italic,underline,tailwindStyles,text,...props}:textTypes){
+  return <span className={cn(textStyles({variant,size,weight,'italic':italic,'underline':underline}),tailwindStyles)} {...props}>{text}</span>
 }

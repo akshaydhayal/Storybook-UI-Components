@@ -1,6 +1,7 @@
-import { cva } from "class-variance-authority";
+import { cva, VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import { ClassValue } from "clsx";
+import { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
 
 const inputStyles = cva([
@@ -21,6 +22,8 @@ function cn(...classes: ClassValue[]) {
   console.log(a);
   return a;
 }
-export default function Input({ type, placeholder,className, ...props }) {
+
+type inputType=VariantProps<typeof inputStyles> & ComponentProps<"input">;
+export default function Input({ type, placeholder,className, ...props }:inputType) {
   return <input className={cn(inputStyles(),className)} type={type} placeholder={placeholder} {...props} />;
 }

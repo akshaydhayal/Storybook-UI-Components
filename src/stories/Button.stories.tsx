@@ -17,14 +17,16 @@ export const Primary:StoryObj<typeof meta>={
     args:{
         text:"Primary",
         variant:"primary",
-        size:"sm"
+        size:"sm",
+        tailwindStyles:""
     }
 }
 export const Secondary:StoryObj<typeof meta>={
     args:{
         text:"Secondary",
         variant:"secondary",
-        size:"md"
+        size:"md",
+        tailwindStyles:""
     }
 }
 

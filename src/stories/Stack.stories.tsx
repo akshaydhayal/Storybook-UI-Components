@@ -14,6 +14,9 @@ const meta:Meta<typeof Stack>={
             },
             options:["row","column"]
         }
+    },
+    parameters:{
+        layout:"centered",
     }
 }
 

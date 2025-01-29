@@ -18,7 +18,7 @@ export const normalInput:Story={
     args:{
         type:"text",
         placeholder:"Enter your name",
-        className:""
+        tailwindStyles:""
     }
 }
 
@@ -26,7 +26,7 @@ export const disableInput:Story={
     args:{
         placeholder:"Disabled button",
         type:"text",
-        className:"",
+        tailwindStyles:"",
         disabled:true
     }
 }
@@ -34,7 +34,7 @@ export const fileInput:Story={
     args:{
         placeholder:"Upload file",
         type:"file",
-        className:"file:rounded-md file:px-2 file:border-slate-200"
+        tailwindStyles:"file:rounded-md file:px-2 file:border-slate-200"
     }
 }
 
@@ -42,13 +42,13 @@ export const Password:Story={
     args:{
         type:"password",
         placeholder:"Enter Password",
-        className:""
+        tailwindStyles:""
     }
 }
 export const Date:Story={
     args:{
         type:"date",
         placeholder:"Enter Date",
-        className:""
+        tailwindStyles:""
     }
 }

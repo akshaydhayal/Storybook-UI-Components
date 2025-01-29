@@ -9,6 +9,12 @@ const meta:Meta<typeof Input>={
     tags:["autodocs"],
     parameters:{
         layout:"centered"
+    },
+    argTypes:{
+        type:{
+            control:{type:"select"},
+            options:["text","number","file","date","password","color"]
+        }
     }
 }
 type Story=StoryObj<typeof meta>;

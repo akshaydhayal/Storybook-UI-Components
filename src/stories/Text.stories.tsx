@@ -9,6 +9,24 @@ const meta:Meta<typeof Text>={
     tags:["autodocs"],
     parameters:{
         layout:"centered"
+    },
+    argTypes:{
+        size:{
+            control:"inline-radio",
+            options:["sm","md","lg","xl"]
+        },
+        weight:{
+            control:"inline-radio",
+            options:["medium","bold","extrabold"]
+        },
+        italic:{
+            control:"boolean",
+            // options:["italic","normal"]
+        },
+        underline:{
+            control:"boolean",
+            // options:["underline","normal"]
+        }
     }
 }
 

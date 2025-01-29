@@ -24,6 +24,7 @@ function cn(...classes: ClassValue[]) {
 }
 
 type inputType=VariantProps<typeof inputStyles> & ComponentProps<"input"> &{tailwindStyles?:string};
+
 export default function Input({ type, placeholder,tailwindStyles, ...props }:inputType) {
   return <input className={cn(inputStyles(),tailwindStyles)} type={type} placeholder={placeholder} {...props} />;
 }

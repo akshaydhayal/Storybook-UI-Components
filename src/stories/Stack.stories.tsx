@@ -10,9 +10,21 @@ const meta:Meta<typeof Stack>={
     argTypes:{
         direction:{
             control:{
-                type:"select",
+                type:"inline-radio",
             },
             options:["row","column"]
+        },
+        justify:{
+            control:{type:"inline-radio"},
+            options:['center','start','between','end']
+        },
+        align:{
+            control:{type:"inline-radio"},
+            options:['center','start','end']
+        },
+        size:{
+            control:{type:"inline-radio"},
+            options:['fit','full']
         }
     },
     parameters:{
@@ -28,6 +40,7 @@ export const rowStack:Story={
         justify:"center",
         align:"center",
         tailwindStyles:"",
+        size:"full",
         children:["Item 1","Item 2","Item 3"]
     }
 } 
@@ -36,6 +49,7 @@ export const colStack:Story={
         direction:"column",
         justify:"center",
         align:"center",
+        size:"full",
         tailwindStyles:"",
         children:['a','b','c']
     }

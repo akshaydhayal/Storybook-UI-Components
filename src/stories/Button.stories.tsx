@@ -10,6 +10,18 @@ const meta:Meta<typeof Button>={
     tags:["autodocs"],
     parameters:{
         layout:"centered"
+    },
+    argTypes:{
+        variant:{
+            control:{
+                type:"inline-radio",
+            },
+            options:["primary","secondary","outline"]
+        },
+        size:{
+            control:{type:"inline-radio"},
+            options:["sm","md","lg"]
+        }
     }
 }
 
